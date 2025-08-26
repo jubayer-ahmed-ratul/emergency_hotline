@@ -1,0 +1,29 @@
+@media screen and (min-width: 200px) and (max-width: 500px) {
+    
+.mmainSection{
+    background-color: aqua;
+    flex-direction: column-reverse;
+}
+
+.ccardSection{
+    background-color: brown;
+}
+.cardD{
+    background-color: black;
+    width: 100%;
+}
+.historyY {
+        width: 100%;
+    }
+  
+}
+
+        /* <div class="bg-[#FFE3E2] w-[60px] h-[60px] p-4 rounded-full"> <img src="assets/police.png" alt=""></div>
+       <div class="bg-[#FFE3E2] w-[60px] h-[60px] p-4 rounded-full"> <img src="assets/fire-service.png" alt=""></div>
+       <div class="bg-[#FFE3E2] w-[60px] h-[60px] p-4 rounded-full"> <img src="assets/ambulance.png" alt=""></div>
+       <div class="bg-[#FFE3E2] w-[60px] h-[60px] p-4 rounded-full"> <img src="assets/emergency.png" alt=""></div>
+       <div class="bg-[#FFE3E2] w-[60px] h-[60px] p-4 rounded-full"> <img src="assets/emergency.png" alt=""></div>
+       <div class="bg-[#FFE3E2] w-[60px] h-[60px] p-4 rounded-full"> <img src="assets/emergency.png" alt=""></div>
+       <div class="bg-[#FFE3E2] w-[60px] h-[60px] p-4 rounded-full"> <img src="assets/emergency.png" alt=""></div>
+       <div class="bg-[#FFE3E2] w-[60px] h-[60px] p-4 rounded-full"> <img src="assets/emergency.png" alt=""></div> */
+        
