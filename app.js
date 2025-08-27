@@ -62,14 +62,19 @@ for (const btn of callButtons) {
        const name = card.getElementsByTagName('h2')[0].innerText;
        const number = card.getElementsByTagName('h1')[0].innerText;
        
-       callingAlert(name,number)
+       alert(`calling : ${name}\nnumber: ${number}`)
 
        let callCoin=converted-20;
        coinValue.innerText=callCoin;
 
 
        const historyAdd = document.getElementById('history-container');
-
+ const currentTime = new Date().toLocaleTimeString([], {
+                hour: '2-digit',
+                minute: '2-digit',
+                second: '2-digit',
+                hour12: true
+            });
 
     let newEntry = document.createElement('div');
 
@@ -79,7 +84,7 @@ for (const btn of callButtons) {
           <h2 class="font-medium">${name}</h2>
           <p>${number}</p>
         </div>
-        <p>${new Date().toLocaleTimeString()}</p>
+        <p>${currentTime}</p>
       </div>
     `;
 
@@ -95,22 +100,40 @@ for (const btn of callButtons) {
     
 }
 
+////////////////////COPY BUTTON
+
+let copyCount = document.getElementById('copy-button');
+let copyButtons = document.getElementsByClassName('copy-btn');
+
+for (const btn of copyButtons) {
+    btn.addEventListener('click', function(e) {
+        e.stopPropagation();
+
+       
+        const card = btn.parentNode.parentNode;
+
+        const name = card.getElementsByTagName('h2')[0].innerText;
+        const number = card.getElementsByTagName('h1')[0].innerText;
 
 
-let callButton = document.getElementsByClassName('call-btn');
+        navigator.clipboard.writeText(number);
 
-for (const btn of callButton) {
-  btn.addEventListener('click', function (e) {
-    e.stopPropagation();
 
-    const card = btn.parentNode.parentNode;
-    const name = card.getElementsByTagName('h2')[0].innerText;
-    const number = card.getElementsByTagName('h1')[0].innerText;
+        alert(`Copied number of ${name} (${number})`);
 
-    
-  });
+     
+        let currentCount = parseInt(copyCount.innerText);
+        copyCount.innerText = currentCount + 1;
+    });
 }
 
+
+
+
+
+
+
+///////////////CLEAR BUTTON
 
 let clearHistory = document.getElementById('history-clear');
 
