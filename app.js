@@ -66,11 +66,66 @@ for (const btn of callButtons) {
 
        let callCoin=converted-20;
        coinValue.innerText=callCoin;
+
+
+       const historyAdd = document.getElementById('history-container');
+
+
+    let newEntry = document.createElement('div');
+
+    newEntry.innerHTML = `
+      <div class="mt-7 bg-gray-100 flex items-center justify-between rounded-lg p-2 entry">
+        <div>
+          <h2 class="font-medium">${name}</h2>
+          <p>${number}</p>
+        </div>
+        <p>${new Date().toLocaleTimeString()}</p>
+      </div>
+    `;
+
+    historyAdd.appendChild(newEntry);
         
        }
        else{
         alert("insufficient funds")
        }
+
+
     })
     
 }
+
+
+
+let callButton = document.getElementsByClassName('call-btn');
+
+for (const btn of callButton) {
+  btn.addEventListener('click', function (e) {
+    e.stopPropagation();
+
+    const card = btn.parentNode.parentNode;
+    const name = card.getElementsByTagName('h2')[0].innerText;
+    const number = card.getElementsByTagName('h1')[0].innerText;
+
+    
+  });
+}
+
+
+let clearHistory = document.getElementById('history-clear');
+
+clearHistory.addEventListener('click', function(e) {
+    e.stopPropagation();
+
+    const historyAdd = document.getElementById('history-container');
+
+    const entries = historyAdd.querySelectorAll('div.mt-7');
+
+    for (const entry of entries) {
+        entry.remove(); // removes the element from the DOM safely
+    }
+
+    console.log('History entries cleared!');
+});
+
+
