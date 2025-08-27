@@ -11,6 +11,24 @@
     margin-bottom: 20px;
 }
 
+.three-buttons{
+    flex-direction: column;
+    width: 100%;
+
+}
+.three-buttons button {
+    width: 100%;
+}
+.button-service  {
+    width: 100%;
+    justify-content: center;
+    
+}
+
+/* .history-container{
+    min-height: 200px;
+} */
+
   
 }
 
