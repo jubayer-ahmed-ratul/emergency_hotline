@@ -8,9 +8,7 @@ querySelectorAll: it Selects all elements that match a CSS selector
 Ans 2:
 
 I will create the element using document.createElement().
-
 Then set its content or attributes (like:  innerText, innerHtml ext)
-
 I will Insert it into the DOM using methods like appendChild()
 
 
@@ -21,32 +19,23 @@ I think of Event Bubbling like this: when something happens on a child element, 
 How I see it work:
 
 I do something on an element, like click it — the event triggers on that element first.
-
 Then it travels upward to its parent, then grandparent, and keeps going until the top.
-
 If I don’t want it to bubble, I can stop it with event.stopPropagation().
-
 Most events bubble by default. I find it really useful when I want to use event delegation, where a parent element handles events for many children.
 
 
 Ans 4:
 
-I think of Event Delegation like this: instead of adding event listeners to every single child element, I just add one listener to their parent. Then, when an event happens, I check which child triggered it.
+I think of Event Delegation like this: instead of putting a click or change listener on every single button or item, I just put one listener on the parent. Then, when something happens, I check which child caused it.
+It works because of event bubbling — events go from the child up to the parent. So I can catch clicks or other actions at the parent and handle all the kids at once.
 
-It works because of event bubbling — events bubble up from children to parents. So I can catch clicks, changes, or other events at the parent level and handle them for all children.
+I like it because:
+I don’t have to add so many listeners.It works even if I add new buttons or items later.
 
-I find it useful because:
-
-I don’t have to attach tons of listeners — it’s way more efficient.
-
-It helps me handle dynamically added elements that weren’t on the page when I first loaded it.
-
-My code stays cleaner and easier to manage.
-
-Basically, I just set a listener on the parent, and it handles everything that happens inside it. It’s like standing at the door and watching everyone come in, instead of chasing each person individually.
+Basically, I just watch from the parent, like standing at the door and seeing everyone enter, instead of following each person one by one.
 
 
-ans: 5
+Ans: 5
 
 preventDefault() – I use this when I want to stop the browser’s default action for an event. For example, if I click a link, the browser normally navigates to a new page. If I call preventDefault(), I stop that navigation but the event still bubbles up.
 
