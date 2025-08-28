@@ -1,3 +1,19 @@
+
+.copy-btn:hover{
+    background-color: aliceblue;
+    border: 1px solid black; 
+}
+.call-btn:hover{
+    background-color: aliceblue;
+    color: black;
+}
+.love-icon:hover{
+   
+    color: red;
+}
+
+
+
 @media screen and (min-width: 200px) and (max-width: 500px) {
     
 .menu-section{
